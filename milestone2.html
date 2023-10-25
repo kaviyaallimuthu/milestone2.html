@@ -1,0 +1,145 @@
+<nav class="site-header">
+	<div class="nav-logo">
+	  <a href="index.html">
+	    <img src="assets/images/logo.png" alt="logo" width="314" height="60">
+	  </a>
+	</div>
+	<button class="hamburger"><img src="assets/images/menu.png" alt="menu toggle icon"></button>
+	<div class="nav-links">
+	  <ul>
+	    <li><a href="index.html">Home</a></li>
+	    <li><a href="#about">About Me</a></li>
+	    <li><a href="#skill">Skills</a></li>
+	    <li><a href="#service">Services</a></li>
+	    <li><a href="#portfolio">Portfolio</a></li>
+	    <li><a href="#testimonial">Testimonial</a></li>
+	    <li><a href="#pricing">Pricing</a></li>
+	    <li><a href="#contact">Contact</a></li>
+	  </ul>
+	</div>
+</nav><!-- .site-header -->
+.site-header {
+    z-index: 10;
+    font-family: "Roboto Condensed", sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+  }
+  @media screen and (min-width: 1250px) {
+    .site-header {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+    }
+  }
+  .site-header .nav-logo {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    padding: 10px 5px 5px;
+  }
+  .site-header .nav-logo a img {
+    max-width: 200px;
+    height: auto;
+  }
+  @media screen and (min-width: 768px) {
+    .site-header .nav-logo a img {
+      max-width: 314px;
+      height: auto;
+    }
+  }
+  .site-header .nav-links {
+    display: none;
+    width: 100%;
+  }
+  @media screen and (min-width: 1250px) {
+    .site-header .nav-links {
+      display: block;
+      background-color: #fff;
+    }
+  }
+  .site-header .nav-links ul {
+    background-color: rgba(222, 240, 255, 0.95);
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    position: absolute;
+    width: 100%;
+  }
+  @media screen and (min-width: 1250px) {
+    .site-header .nav-links ul {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      position: static;
+      background-color: transparent;
+    }
+  }
+  .site-header .nav-links ul li {
+    list-style: none;
+    position: relative;
+  }
+  .site-header .nav-links ul li a {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 400;
+    color: #7f53ac;
+    letter-spacing: 1.2px;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+  }
+  .site-header .nav-links ul li:hover {
+    background-color: #efe0ff;
+  }
+  .site-header button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    max-width: 50px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  @media screen and (min-width: 768px) {
+    .site-header button {
+      top: 20px;
+    }
+  }
+  @media screen and (min-width: 1250px) {
+    .site-header button {
+      display: none;
+    }
+  }
+  .nav-links.active {
+    display: block;
+  }
+  const hamburger = document.getElementsByClassName("hamburger")[0]
+const mobileNavs = document.getElementsByClassName("nav-links")[0]
+hamburger.addEventListener("click", () => {
+  mobileNavs.classList.toggle("active")
+})
